@@ -16,7 +16,7 @@ open_page('Toko Keren');
         <br>
         <h2>Check now or Regret tommorrow</h2>
         <form action="login_process.php" method="post">
-            <input type="text" name="username" class="username" placeholder="Username">
+            <input type="text" name="email" class="email" placeholder="Email">
             <input type="password" name="password" class="password" placeholder="Password">
             <button type="submit">Sign me in</button>
             <div class="error"><span>+</span></div>
