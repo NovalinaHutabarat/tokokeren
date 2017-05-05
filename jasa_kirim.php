@@ -1,35 +1,70 @@
-<?php
-session_start();
-include_once('functions.php');
-open_page('Toko Keren');
-
+<?php 
+ session_start(); 
+ include_once('functions.php'); 
+ include_once('configdb.php'); 
+ open_page('index'); 
 ?>
 
-<!-- Bootstrap core CSS -->
-<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
-<link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/supersized.css">
-<link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
 
-    <div class="page-container">
-        <h1>Toko Keren</h1>
-        <br>
-        <form action="jasa_kirim_process.php" method="post">
-            <input type="text" name="nama" placeholder="Nama">
-            <input type="text" name="lama_kirim" placeholder="Lama Kirim">
-            <input type="text" name="tarif" placeholder="Tarif">
-            <button type="submit">Submit</button>
-            <div class="error"><span>+</span></div>
-        </form>
+    <!-- Add custom CSS here -->
+    <link href="css/business-casual.css" rel="stylesheet">
+
+    <div class="brand">Toko Keren</div>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="home.php">Home</a>
+                    </li>
+                    <li><a href="toko.php">Toko</a>
+                    </li>
+                    <li><a href="jasa_kirim.php">Jasa Kirim</a>
+                    </li>
+                    <li><a href="promo.php">Promo</a>
+                    </li>
+                    <li><a href="index.php">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center"><strong>Jasa Pengiriman</strong></h2>
+                    <hr>
+                </div>
+                <div class="page-container">
+                <br>
+                <form action="jasa_kirim_process.php" method="post">
+                    <input type="text" name="nama" placeholder="Nama">
+                    <input type="text" name="lama_kirim" placeholder="Lama Kirim">
+                    <input type="text" name="tarif" placeholder="Tarif">
+                    <button type="submit">Submit</button>
+                    <div class="error"><span>+</span></div>
+                </form>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- /.container -->
 
-    <!-- Javascript -->
-    <script src="assets/js/jquery-1.8.2.min.js"></script>
-    <script src="assets/js/supersized.3.2.7.min.js"></script>
-    <script src="assets/js/supersized-init.js"></script>
-    <script src="assets/js/scripts.js"></script>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; Company 2013</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-</body>
-
-</html>
-
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
