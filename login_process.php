@@ -6,13 +6,13 @@
      redirect('index.php'); 
  }
  
- $username = $_POST['username']; 
+ $email = $_POST['email']; 
  $password = $_POST['password']; 
- $_SESSION['username']=$username;
+ $_SESSION['email']=$username;
  
- $query = 'SELECT * FROM account WHERE username=? AND password=?'; 
+ $query = 'SELECT * FROM pengguna WHERE email=? AND password=?'; 
  $statement = $database->prepare($query); 
- $statement->bind_param('ss', $username, $password); 
+ $statement->bind_param('ss', $email, $password); 
  $statement->execute(); 
  $result_set = $statement->get_result(); 
  
